@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AddressBook3Tier.master.cs" Inherits="Content_AddressBook3Tier" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color:blanchedalmond">
+    <form id="form1" runat="server">
+    
+        <div class="container-fluid p-2">
+            <div class="row p-2 ">
+                <div class="col-md-3">
+                    <h2 class="text-center p-2" title ="AddressBook Database"> <i class="far fa-address-card"></i>MultiUserAddressBook(3-Tier)</h2>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-12 p-2 d-flex justify-content-end">
+                        <asp:HyperLink runat="server" tooltip="Navigate to CountryList " ID="hlCountry" Text="Country" NavigateUrl="~/AdminPanel/Country/CountryList.aspx" CssClass="btn btn-danger"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to StateList" ID="hlState" Text="State" NavigateUrl="~/AdminPanel/State/StateList.aspx" CssClass="btn btn-primary"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to CityList" ID="hlCity" Text="City" NavigateUrl="~/AdminPanel/City/CityList.aspx" CssClass="btn btn-success"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to ContactCategoryList" ID="hlContactCategory" Text="Contact Category" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryList.aspx" CssClass="btn btn-warning"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to ContactList" ID="hlContact" Text="Contact" NavigateUrl="~/AdminPanel/Contact/ContactList.aspx" CssClass="btn btn-secondary"></asp:HyperLink>&nbsp;&nbsp;
+                        
+                    </div>
+                        <div class="col-md-12 p-2 d-flex justify-content-end">
+                        <asp:HyperLink runat="server" tooltip="Navigate to CountryList " ID="hlCountryAddEdit" Text="Add Country" NavigateUrl="~/AdminPanel/Country/CountryAddEdit.aspx" CssClass="btn btn-outline-danger"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to StateList" ID="hlStateAddEdit" Text="Add State" NavigateUrl="~/AdminPanel/State/StateAddEdit.aspx" CssClass="btn btn-outline-primary"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to CityList" ID="hlCityAddEdit" Text="Add City" NavigateUrl="~/AdminPanel/City/CityAddEdit.aspx" CssClass="btn btn-outline-success"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to ContactCategoryList" ID="hlContactCategoryAddEdit" Text="Add ContactCategory" NavigateUrl="~/AdminPanel/ContactCategory/ContactCategoryAddEdit.aspx" CssClass="btn btn-outline-warning"></asp:HyperLink>&nbsp;&nbsp;
+                        <asp:HyperLink runat="server" tooltip="Navigate to ContactList" ID="hlContactAddEdit" Text="Add Contact" NavigateUrl="~/AdminPanel/Contact/ContactAddEdit.aspx" CssClass="btn btn-outline-secondary"></asp:HyperLink>&nbsp;&nbsp;
+                        
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-2 p-2 " style="border-left:2px solid Silver">
+                    <asp:Button ID="btnLogout" runat="server" Text ="Logout" CssClass="btn btn-dark" OnClick="btnLogout_Click" /><br>
+                    <asp:Label ID="lblMessage" runat="server" EnableViewState="false" CssClass="p-1"></asp:Label>
+                </div>
+            </div>
+            <hr />
+            <div class="row ">
+                <div class="col-md-12">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center">Ishit Vasoya | 190540107221 | <asp:HyperLink runat="server" Text= "190540107221@darshan.ac.in" NavigateUrl="mailto:190540107221@darshan.ac.in" ToolTip="Contact Email"></asp:HyperLink></h3>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+</body>
+</html>
